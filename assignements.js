@@ -273,17 +273,22 @@ console.log(` i like to drink ${drink3}`);
 
 
 // FINAL CODING CHALLENGE OF THE FIRST SECTION :
-let value = 0;
-let tip;
+let value = 60;
 if (value >= 50 && value <= 300) {
- let valueStock = value - value / 100 * 15
-  console.log(`the is ur bill after discount ${valueStock}`);
+ let valueStock = value + value / 100 * 15
+  console.log(`the is ur bill of ${value} $ after 15% tip u will pay ${valueStock} $`);
 } else if (value < 50){
-  console.log('no discount sorry');
+  console.log('no discount amount too low');
 } else {
-  let valueTipTwenty = value - value / 100 * 20
-  console.log(`this is your bill after 20 % discount ${valueTipTwenty}`);
+  let valueTipTwenty = value + value / 100 * 20
+  console.log(`this is your bill of ${value} $ after 20 % tip u will pay ${valueTipTwenty} $`);
 }
 
 
+// FINAL CODING CHALLENGE OF THE FIRST SECTION SECOND WAY TO MAKE IT , exercices resolved with ternaire method  4 code lane !!
+const bill = 100;
+const tips = bill <= 300 && bill >= 50 ? bill * 0.15 : 
+bill * 0.20;
+console.log(` la bill de ${bill} a un tip de ${tips} et coutera  ${bill + tips}`);
 
+ // the only thing i dont like on that exercices method is that if the bill is under 50 then why we would pay 20 % .. we shouldnt pay anything as tip .
