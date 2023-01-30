@@ -164,3 +164,82 @@ console.log(Number(inputYear)+18);
 console.log(typeof NaN);
 console.log(typeof inputYear);
 
+// coding challenge #3
+
+//const random = Math.trunc(Math.random(koalas ))
+
+const koalasArray = [1,2,79];    // ou ds ce cas plus simple const tableau =  (1 + 2 +79 / 3 ) et on a la moyenne du tableau 
+const dolphinArray = [1,2,79];
+
+// additions de chaque tableau pr voir le vainqueur 
+let resultKoalasArray = koalasArray.reduce((a,b) => {
+  return a + b ; 
+});
+console.log(resultKoalasArray);
+
+let resultDolphinArray = dolphinArray.reduce((a,b) => {
+  return a + b ; 
+});
+console.log(resultDolphinArray);
+
+// condition message apres les resultats
+  if (resultDolphinArray > resultKoalasArray ) {
+    console.log('U are the Winner of the competition Dolphin !!!');
+    //verifie seulement resultDolphinArray + que 100 car Koalas le sera automatiquement si la condition draw est verifier 
+} else if (resultDolphinArray == resultKoalasArray && resultDolphinArray >= 100 ) {
+    console.log(' wow thats a draw ! ');
+} else if(resultDolphinArray && resultKoalasArray < 100) {
+  console.log("No Winner , U are below 100 ! (");
+
+} else {
+console.log(' u are the winner Koalas super ! ');
+}
+
+
+ 
+// SWITCH statement -> good to make comparison 
+
+const day = 'monday';
+
+ switch (day) {
+  case 'monday':   // day === monday 
+    console.log('we are Monday , i plan my course structure');
+  break; // tjrs mettre sinon le code va afficher tout les log de la semaine , le bloc va tre executer en entier 
+  case 'tuesday':
+    console.log('we are tuesday, i plan other stuff');
+    break;
+    case 'wednesday':
+      console.log('bkabkbabkjabak wednesday');
+    case 'thursday' :
+      console.log('i love to code on thursday');
+      break;
+    case 'friday' :
+      console.log('i love to code on friday');
+      break;
+    case 'saturday' :
+      console.log('i love to code on saturday');
+    case 'sunday' :
+      console.log('i love to code on sunday');
+      break;
+      default:
+        console.log("its not a valid day ");
+ }
+
+// Coding Challenge https://www.udemy.com/course/the-complete-javascript-course/learn/lecture/22648197?start=555#content
+// same than the switch case Up 
+
+ const dayBis = 'monday';
+ if (dayBis === 'monday') {
+  console.log('we are monday thats such a great day !');
+  
+ } else if ( dayBis == 'tuesday') {
+  console.log('we arent monday , we are tuesday' );
+ } else if (dayBis == 'wednesday' || dayBis == 'thursday') {
+  console.log('I love the code on wednesday and thursday');
+ } else if (dayBis == 'friday') {
+  console.log('we are friday');
+ } else if ( dayBis == 'saturday' || dayBis == 'sunday') {
+  console.log('I love the Week end');
+ } else {
+  console.log('invalid day name');
+ }
