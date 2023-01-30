@@ -243,3 +243,23 @@ const day = 'monday';
  } else {
   console.log('invalid day name');
  }
+
+
+
+
+ // Ternaire , plus simple qu un if else parfois exemple below : 
+ //TERNAIRE
+ const ageSimple = 17;
+ const drink2 = ageSimple >= 18 ? 'Wine' : 'Water';    // ceci est une expression car il y a un resultat a la fin  , et ca ne fait qu'une seule ligne de code
+ console.log(drink2);
+
+// AVEC LE IF/ELSE 
+
+let drink3;
+if (ageSimple >= 18) {
+  drink3 = 'Wine';
+}else {
+  drink3 = 'Water';
+}
+// 4 ligne de codes , avec le ternaire une seule ligne de code 
+console.log(drink3);
