@@ -248,6 +248,7 @@ const day = 'monday';
 
 
  // Ternaire , plus simple qu un if else parfois exemple below : 
+ //Par contre le ternaire ne remplace pas le if/else , juste a utiliser ds quelques cas simples , decision rapide comme ligne 254 . 
  //TERNAIRE
  const ageSimple = 17;
  const drink2 = ageSimple >= 18 ? 'Wine' : 'Water';    // ceci est une expression car il y a un resultat a la fin  , et ca ne fait qu'une seule ligne de code
@@ -263,3 +264,26 @@ if (ageSimple >= 18) {
 }
 // 4 ligne de codes , avec le ternaire une seule ligne de code 
 console.log(drink3);
+
+
+
+// on peux meme faire comme ceci avec les backtick , $ curve bracket {}:
+
+console.log(` i like to drink ${drink3}`);
+
+
+// FINAL CODING CHALLENGE OF THE FIRST SECTION :
+let value = 0;
+let tip;
+if (value >= 50 && value <= 300) {
+ let valueStock = value - value / 100 * 15
+  console.log(`the is ur bill after discount ${valueStock}`);
+} else if (value < 50){
+  console.log('no discount sorry');
+} else {
+  let valueTipTwenty = value - value / 100 * 20
+  console.log(`this is your bill after 20 % discount ${valueTipTwenty}`);
+}
+
+
+
